@@ -7,19 +7,17 @@ import React from "react";
 
 export default function BiographyPage() {
   const markdown = `
-    I grew up in the Sakha Republic (Yakutia) of Russia, where my childhood dreams revolved around running a conservation safari in Africa - caring for wildlife and documenting nature like a National Geographic explorer.
+    I grew up in a small village in Yakutia, Russia, where I dreamed of African safaris and wildlife conservation watching **National Geographic**. My path changed when our school visited local tech companies ([**inDrive**](https://indrive.com), [**MyTona**](https://mytona.com)) — seeing developers create digital products ignited something new in me.
     
-    During middle school, I discovered the world of technology when our teacher organized field trips to [InDrive](https://indrive.com/) and [MyTona](https://mytona.com/) offices. These experiences planted the seed that would eventually inspire me to become a creator of digital products.
+    At 17, I left for **Siberian Federal University**. When COVID hit, I returned home and even built wooden chairs to make ends meet. Everything changed during an online hackathon where I met Ivan, who became my mentor. We placed third, and I won "best product design." Instead of giving me answers, Ivan pointed me toward **JavaScript** and **React** courses.
     
-    At 17, I enrolled at Siberian Federal University (SFU) in central Siberia. During my first year, the COVID-19 lockdown forced me to return to my hometown of Yakutsk. My close friend and I tried various ways to earn money, including crafting and selling wooden chairs. During this period, I participated in an online hackathon called "My Future Profession is IT." There, I collaborated with Ivan on developing a mobile application for local university events. He provided design templates and mockups, taught me basic tools in Figma, and created the design for our app. We placed third in the hackathon, and I received a special nomination for best product design.
+    With growing skills, I landed an internship at [**KozhinDev**](https://kozhindev.com) working on an open-source UI library. When the war started, I knew I needed opportunities beyond Russia's closing borders.
     
-    After this breakthrough, I began asking Ivan to mentor me in development. His approach was to guide rather than spoon-feed - "read about this topic and try to implement it yourself." He recommended valuable Udemy courses for JavaScript, React, and React Native.
+    Instagram's algorithm became my unlikely savior, showing me the [**nFactorial Incubator**](https://nfactorial.school) coding bootcamp in Kazakhstan—my gateway to the global tech scene.
     
-    Returning to university for my second year, I had accumulated several pet projects for my portfolio and decided to apply for internships in Krasnoyarsk. After navigating through approximately five interviews, I secured an internship at KozhinDev.
+    Since then, I've worked with startups across multiple domains: building communities in a [**social network platform**](https://www.wegowhere.com/), developing [**gym management SaaS**](https://usekilo.com) solutions, and creating data visualization tools for [**agrotech**](https://www.facebook.com/people/Tengri-Lights/100084437472482/) companies. Each role has taught me something valuable.
     
-    At KozhinDev, I worked on an open-source UI library for React, learning how to develop foundational UI frameworks similar to Material-UI and Bootstrap from the ground up. I worked there for a year until the war began. My ambition was to work in the global market alongside the giants of the IT industry, and I realized that with borders closing and major companies exiting Russia, opportunities were dwindling.
-    
-    I began searching for opportunities to relocate to neighboring countries like Kazakhstan. Fortuitously, Instagram's algorithm connected me with information about the nFactorial Incubator - a summer coding bootcamp in Almaty, Kazakhstan.
+    I'm still on my journey. The African savanna of my childhood dreams has transformed into a digital landscape where I'm making an impact. One thing remains the same—I'm still that village kid who refuses to let circumstances define my future.
   `
 
   return (
@@ -32,7 +30,7 @@ export default function BiographyPage() {
                 Biography
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                The life is a game and how I play it
+                Long story short about me
               </p>
             </div>
           </div>
@@ -54,7 +52,19 @@ export default function BiographyPage() {
                       {props.children}
                     </code>
                   )
-                }
+                },
+                a: (props) => {
+                  return (
+                    <a
+                      {...props}
+                      className="text-primary font-medium hover:underline transition-all"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {props.children}
+                    </a>
+                  )
+                },
               }}
             >
               {markdown}

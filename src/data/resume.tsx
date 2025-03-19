@@ -168,11 +168,9 @@ export const DATA = {
       dates: "Dec 2024 - Jan 2025",
       active: true,
       description:
-        "Simple analog of [TypeForm](https://www.typeform.com/), " +
-        "I decided to build a SaaS which allows users to create the polymorphic forms that fits any business " +
-        "needs and can be embedded any react family web application. " +
-        "It's free now, so you can try it out. \n\n" +
-        "(P.S. go to /login and use google auth)",
+        "A [TypeForm](https://www.typeform.com/) alternative that lets you create flexible forms for any business need, " +
+        "easily embedded in React applications. \n\n\n" +
+        "Try it free—just log in with Google",
       technologies: [
         "Python",
         "TypeScript",
@@ -185,7 +183,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://thepolyform.com",
+          href: "https://thepolyform.com/login",
           icon: <Icons.globe className="size-3" />,
         },
         // {
@@ -194,7 +192,7 @@ export const DATA = {
         //   icon: <Icons.github className="size-3" />,
         // },
       ],
-      image: "",
+      image: "/projects/thepolyform.png",
       video: "",
     },
   ],
