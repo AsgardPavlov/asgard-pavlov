@@ -1,5 +1,4 @@
 import { Icons } from "@/components/icons";
-import {GlobeIcon} from "lucide-react";
 
 export const DATA = {
   firstName: "Asgard",
