@@ -80,6 +80,7 @@ jobs:
           # Copy files to server
           scp docker-compose.yml asgard@${{ secrets.DO_HOST }}:${DEPLOY_PATH}/
           scp nginx/nginx.conf asgard@${{ secrets.DO_HOST }}:${DEPLOY_PATH}/nginx/
+          scp nginx/nginx-http.conf asgard@${{ secrets.DO_HOST }}:${DEPLOY_PATH}/nginx/conf.d/
           scp .github/deployment/deploy.sh asgard@${{ secrets.DO_HOST }}:${DEPLOY_PATH}/deploy.sh
           scp nginx/entrypoint.sh asgard@${{ secrets.DO_HOST }}:${DEPLOY_PATH}/nginx/entrypoint.sh
 
