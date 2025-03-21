@@ -7,8 +7,6 @@ services:
       - "3000"
     networks:
       - internal
-#    depends_on:
-#      - asgard-pavlov-server
     restart: unless-stopped
 
   nginx:
@@ -25,11 +23,20 @@ services:
     depends_on:
       - asgard-pavlov-web
     restart: unless-stopped
+    # Add the entrypoint script
+    entrypoint: ["/entrypoint.sh"]
 
+  # Add a certbot service for certificate management
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    depends_on:
+      - nginx
+    # This will run once and then stop - it's for initial certificate acquisition
+    command: certonly --webroot -w /var/www/certbot --force-renewal --email asgardpavlov@gmail.com -d asgardpavlov.com -d www.asgardpavlov.com --agree-tos --no-eff-email --staging
+    # Remove --staging flag when you're ready for production certificates
 
 networks:
   internal:
-
-volumes:
-  postgres_data:
-  chroma_data:
