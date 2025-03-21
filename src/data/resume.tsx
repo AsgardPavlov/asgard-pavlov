@@ -9,18 +9,21 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/Subotica,+Serbia/@46.093545,19.5093146,11z/data=!3m1!4b1!4m6!3m5!1s0x474366c168af38f9:0xdf19bd922a3d838e!8m2!3d46.0969581!4d19.65763!16zL20vMDE4N2p0?entry=ttu",
   description:
     "(0→1) Full Stack Engineer",
-  summary: `
-    This website is dedicated to my potential collaborators:
-    
-    - clients 
-    - investors
-    - employers
-    - friends
-
-    It's also my digital gallery of creations and thoughts that I want to share with the world.
-    
-    So welcome — I'm glad you're here!
-  `,
+  summary: "" +
+    "This website is dedicated to my potential collaborators:" +
+    "\n\n" +
+    "- clients" +
+    "\n" +
+    "- investors" +
+    "\n" +
+    "- employers" +
+    "\n" +
+    "- friends" +
+    "\n\n" +
+    "It's also my digital gallery of creations and thoughts that I want to share with the world." +
+    "\n\n" +
+    "So welcome — I'm glad you're here!" +
+    "",
   avatarUrl: "/me.png",
   programmingLanguages: [
     "Typescript",
