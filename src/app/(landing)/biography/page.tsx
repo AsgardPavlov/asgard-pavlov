@@ -4,31 +4,32 @@ import React from "react";
 import { Markdown } from "@/components/Markdown";
 
 export default function BiographyPage() {
-  const markdown =
-    "I grew up in a small village in Yakutia, Russia, where I dreamed of African safaris and wildlife conservation " +
-    "watching **National Geographic**. My path changed when our school visited local tech companies " +
-    "([**inDrive**](https://indrive.com), [**MyTona**](https://mytona.com)) — seeing developers create digital " +
-    "products ignited something new in me." +
-    "\n\n" +
-    "At 17, I left for **Siberian Federal University**. When COVID hit, I returned home and even built wooden " +
-    "chairs to make ends meet. Everything changed during an online hackathon where I met Ivan, who became my mentor. " +
-    "We placed third, and I won \"best product design.\" Instead of giving me answers, Ivan pointed me " +
-    "toward **JavaScript** and **React** courses." +
-    "\n\n" +
-    "With growing skills, I landed an internship at [**KozhinDev**](https://kozhindev.com) working on an open-source " +
-    "UI library. When the war started, I knew I needed opportunities beyond Russia's closing borders." +
-    "\n\n" +
-    " Instagram's algorithm became my unlikely savior, showing me the " +
-    "[**nFactorial Incubator**](https://nfactorial.school) coding bootcamp in Kazakhstan—my gateway to the global tech scene." +
-    "\n\n" +
-    "Since then, I've worked with startups across multiple domains: building communities in a " +
-    "[**social network platform**](https://www.wegowhere.com/), developing [**gym management SaaS**](https://usekilo.com) " +
-    "solutions, and creating data visualization tools for [**agrotech**](https://www.facebook.com/people/Tengri-Lights/100084437472482/) " +
-    "companies. Each role has taught me something valuable." +
-    "\n\n" +
-    "I'm still on my journey. The African savanna of my childhood dreams has transformed into a digital landscape where " +
-    "I'm making an impact. One thing remains the same—I'm still that village kid who refuses to let circumstances define my future."
-
+const markdown =
+  "I grew up in a small village in Yakutia, Russia, where I dreamed of African safaris and wildlife conservation while " +
+  "watching **National Geographic**. My path changed when our school visited local tech companies " +
+  "([**inDrive**](https://indrive.com) and [**MyTona**](https://mytona.com)) — seeing developers create digital " +
+  "products ignited something new in me." +
+  "\n\n" +
+  "At 17, I left for **Siberian Federal University**. When COVID hit, I returned home and worked as an electrician, even built wooden " +
+  "chairs to make ends meet. Everything changed during an online hackathon where I met Ivan, who became my mentor. " +
+  "We placed third, and I won \"Best Product Design.\" Instead of giving me answers, Ivan guided me " +
+  "toward **JavaScript** and **React** courses." +
+  "\n\n" +
+  "With growing skills, I landed an internship at [**KozhinDev**](https://kozhindev.com) working on an [**open-source " +
+  "UI library**](https://steroids.dev/). A year after the war started, I knew I needed opportunities beyond " +
+  "Russia's closing borders." +
+  "\n\n" +
+  "Instagram's algorithm became my unlikely savior, showing me the " +
+  "[**nFactorial Incubator**](https://nfactorial.school) coding bootcamp in Kazakhstan — my gateway to the global tech scene." +
+  "\n\n" +
+  "Since then, I've worked with startups across multiple domains: building a " +
+  "[**social network mobile app**](https://www.wegowhere.com/), developing [**gym management SaaS**](https://usekilo.com) " +
+  "solutions, and creating data visualization tools for an [**agrotech company**]" +
+  "(https://www.facebook.com/people/Tengri-Lights/100084437472482/). " +
+  "Each role has taught me something valuable." +
+  "\n\n" +
+  "I'm still on my journey. The African savanna of my childhood dreams has transformed into a digital landscape where " +
+  "I'm making an impact. One thing remains the same—I'm still that village kid who refuses to let circumstances define my future."
 
   return (
     <section id="biography">
