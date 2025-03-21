@@ -24,6 +24,13 @@ services:
       - asgard-pavlov-web
     restart: unless-stopped
 
-
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    depends_on:
+      - nginx
+      -
 networks:
   internal:
