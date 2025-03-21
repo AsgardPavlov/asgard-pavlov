@@ -119,3 +119,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+.markdown > * {
+  all: revert;
+  
+  table {
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 6px 13px;
+    border: 1px solid black;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}

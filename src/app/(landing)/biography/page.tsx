@@ -1,9 +1,7 @@
 import {BlurFade} from "@/components/magicui/blur-fade";
 import {BLUR_FADE_DELAY} from "@/lib/variables";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import {cn} from "@/lib/utils";
 import React from "react";
+import { Markdown } from "@/components/Markdown";
 
 export default function BiographyPage() {
   const markdown = `
@@ -37,36 +35,7 @@ export default function BiographyPage() {
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
           <div className="max-w-[800px] mx-auto">
-            <Markdown
-              remarkPlugins={[remarkGfm]}
-              components={{
-                code: (props) => {
-                  return (
-                    <code
-                      {...props}
-                      className={cn(
-                        props.className,
-                        "text-wrap"
-                      )}
-                    >
-                      {props.children}
-                    </code>
-                  )
-                },
-                a: (props) => {
-                  return (
-                    <a
-                      {...props}
-                      className="text-primary font-medium hover:underline transition-all"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {props.children}
-                    </a>
-                  )
-                },
-              }}
-            >
+            <Markdown>
               {markdown}
             </Markdown>
           </div>

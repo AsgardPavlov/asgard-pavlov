@@ -9,9 +9,8 @@ import {
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import React from "react";
+import {Markdown} from "@/components/Markdown";
 
 interface Props {
   title: string;
@@ -79,24 +78,7 @@ export function ProjectCard({
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown
-            remarkPlugins={[remarkGfm]}
-            components={{
-              code: (props) => {
-                return (
-                  <code
-                    {...props}
-                    className={cn(
-                      props.className,
-                      "text-pretty"
-                    )}
-                  >
-                    {props.children}
-                  </code>
-                )
-              }
-            }}
-          >
+          <Markdown>
             {description}
           </Markdown>
         </div>
