@@ -13,6 +13,7 @@ services:
     image: ${DOCKERHUB_USERNAME}/asgard-pavlov-nginx:${GITHUB_SHA}
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/nginx-http.conf:/etc/nginx/nginx-http.conf:ro
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
     ports:
@@ -31,6 +32,10 @@ services:
       - ./certbot/www:/var/www/certbot
     depends_on:
       - nginx
+    command: certonly --webroot -w /var/www/certbot -d asgardpavlov.com -d www.asgardpavlov.com --email asgardpavlov@gmail.com --agree-tos --no-eff-email --force-renewal
+    # Don't start automatically
+    profiles:
+      - certbot
 
 networks:
   internal:
