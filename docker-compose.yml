@@ -7,8 +7,8 @@ services:
       - "3000"
     networks:
       - internal
-    depends_on:
-      - asgard-pavlov-server
+#    depends_on:
+#      - asgard-pavlov-server
     restart: unless-stopped
 
   nginx:
